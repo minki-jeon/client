@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /* tag name selector */
+            h1 {
+                background-color: red;
+                color: white;
+            }
+            /* h2의 배경은 blue, 텍스트는 yellow */
+            h2 {
+                background-color: blue;
+                color: yellow;
+            }
+            /* child selector */
+            ul > li {
+                color: chocolate;
+            }
+            ol > li {
+                color: skyblue;
+            }
+            img {
+                width: 250px;
+            }
+            a > img {
+                border: 5px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- h1*2>lorem1^h2*2>lorem1 -->
+        <h1>Lorem.</h1>
+        <h1>Voluptates.</h1>
+        <h2>Lorem.</h2>
+        <h2>Officia!</h2>
+
+        <!-- ul>li*3>lorem1 -->
+        <ul>
+            <li>Lorem.</li>
+            <li>Velit?</li>
+            <li>Praesentium.</li>
+        </ul>
+
+        <!-- ol>li*3>lorem1 -->
+        <ol>
+            <li>Lorem.</li>
+            <li>Maxime?</li>
+            <li>Aut.</li>
+        </ol>
+
+        <img src="../html/textIcon1.png" alt="">
+        <a href="https://www.naver.com">
+            <img src="../html/textIcon2.png" alt="">
+        </a>
+    </body>
+</html>
