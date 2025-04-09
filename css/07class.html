@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* class 선택자 */
+        .a {
+            color: gold;
+        }
+        .b {
+            background-color: red;
+        }
+        .c {
+            background-color: blue;
+        }
+        .d {
+            color: red;
+        }
+        .e {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- div>span>lorem3^h1>lorem2+span>lorem1 -->
+    <div>
+        <span class="a">Lorem, ipsum dolor.</span>
+        <h1>Lorem, ipsum.<span class="a">Lorem.</span></h1>
+    </div>
+    <span>Lorem, ipsum dolor.</span>
+    <span class="a">Lorem, ipsum dolor.</span>
+
+    <h5 class="c">Lorem, ipsum dolor.</h5>
+    <h5 class="b">Saepe, dolorem quas.</h5>
+    <h5 class="c">Vitae, sint nobis!</h5>
+    <h5 class="b">Quaerat, debitis perspiciatis!</h5>
+
+    <!-- p*4>lorem10 -->
+    <p class="d">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, ipsa.</p>
+    <p class="e">At eveniet tempora dignissimos, distinctio excepturi in pariatur est molestiae?</p>
+    <p class="e">Commodi eligendi reprehenderit impedit nesciunt. Ratione amet dignissimos et est?</p>
+    <p class="d">Provident minima recusandae voluptatum dolores hic ipsum doloremque ullam dolore.</p>
+</body>
+</html>
