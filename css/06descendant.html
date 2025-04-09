@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div>img {
+                width: 200px;
+            }
+            a>img {
+                width: 500px;
+            }
+
+            /* 자손 selector */
+            div img {
+                border: 5px solid blue;
+            }
+            div span {
+                color: gold;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img src="../html/ai_profile.png" alt="">
+            <a href="">
+                <img src="../html/ai_profile.png" alt="">
+            </a>
+        </div>
+
+        <div>
+            <span>Lorem, ipsum dolor.</span>
+            <h1>Lorem, ipsum <span>dolor.</span></h1>
+        </div>
+        <span>Lorem, ipsum dolor.</span>
+    </body>
+</html>
