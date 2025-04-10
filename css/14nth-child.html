@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!-- html>head>style^body -->
+<html>
+<head>
+    <style>
+        h1:nth-child(2) {
+            /* 두번째의 h1 요소 */
+            color: yellow;
+        }
+        h1:nth-child(odd) {
+            /* 홀수 번째의 h1 요소 */
+            background-color: skyblue;
+        }
+        h1:nth-child(even) {
+            /* 짝수 번째의 h1 요소 */
+            border: 5px solid red;
+        }
+
+        table {
+            width: 500px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+        }
+        th {
+            background-color: black;
+            color: white;
+        }
+        table.striped tr:nth-child(even) {
+            /* 테이블의 짝수번째의 행에 배경색상 적용 */
+            background-color: gainsboro;
+        }
+    </style>
+</head>
+<body>
+    <!-- h1*3>lorem1^div>h1*3>lorem1 -->
+    <h1>Lorem.</h1>
+    <h1>Perspiciatis!</h1>
+    <h1>Officiis?</h1>
+    <div>
+        <h1>Lorem.</h1>
+        <h1>Iste.</h1>
+        <h1>Illum!</h1>
+    </div>
+    <h1>text</h1>
+<!-- 
+    table>(thead>tr>th*4>lorem1)+(tbody>tr*5>td*4>lorem1)
+    table>thead>tr>th*4>lorem1^^^tobdy>tr*5>td*4>lorem1 
+-->    
+    <table>
+        <thead>
+            <tr>
+                <th>Lorem.</th>
+                <th>Sit!</th>
+                <th>Minima?</th>
+                <th>Numquam?</th>
+            </tr>
+        </thead>
+        <tobdy>
+            <tr>
+                <td>Lorem.</td>
+                <td>Impedit!</td>
+                <td>Consequatur.</td>
+                <td>Quae?</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Magnam.</td>
+                <td>Quisquam.</td>
+                <td>Omnis.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Explicabo.</td>
+                <td>Tempora?</td>
+                <td>Repellat!</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Voluptatibus!</td>
+                <td>Minima!</td>
+                <td>Deserunt.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Voluptas?</td>
+                <td>Quaerat?</td>
+                <td>Itaque!</td>
+            </tr>
+        </tobdy>
+    </table>
+
+    <hr />
+    
+    <!-- table>thead>tr>th*4>lorem1^^^tobdy>tr*5>td*4>lorem1  -->
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>Lorem.</th>
+                <th>Ipsa.</th>
+                <th>Quibusdam?</th>
+                <th>Reprehenderit.</th>
+            </tr>
+        </thead>
+        <tobdy>
+            <tr>
+                <td>Lorem.</td>
+                <td>Commodi?</td>
+                <td>Autem?</td>
+                <td>Commodi.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Debitis.</td>
+                <td>Corporis?</td>
+                <td>Sunt.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Maxime.</td>
+                <td>Nihil!</td>
+                <td>Alias.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>A.</td>
+                <td>Eveniet.</td>
+                <td>Magnam.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Fugiat.</td>
+                <td>Iusto!</td>
+                <td>Voluptatibus.</td>
+            </tr>
+        </tobdy>
+    </table>
+
+</body>
+</html>

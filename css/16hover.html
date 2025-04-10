@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!-- 벤치마킹(Table-hover): http://getbootstrap.com/docs/5.3/content/tables/#hoverable-rows -->
+
+<html>
+<head>
+    <style>
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
+        th, td {
+            height: 36px;
+        }
+        th {
+            color: white;
+            border-bottom: 3px double black;
+            background-color: #aaa;
+        }
+        td {
+            border-bottom: 1px solid #ccc;
+        }
+        table.table-stripe tbody tr:nth-child(odd) {
+            background-color: #eee;
+        }
+        table.table-hover tbody tr:hover{
+            background-color: #ccc
+        }
+
+    </style>
+</head>
+<body>
+    <!-- table>thead>tr>th*4>lorem1^^tbody>tr*3>td*4>lorem1 -->
+    <table class="table-hover">
+        <thead>
+            <tr>
+                <th>Lorem.</th>
+                <th>Dolor?</th>
+                <th>Aperiam.</th>
+                <th>Libero?</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>Lorem.</td>
+                    <td>Omnis?</td>
+                    <td>Nihil?</td>
+                    <td>Aut.</td>
+                </tr>
+                <tr>
+                    <td>Lorem.</td>
+                    <td>Nobis.</td>
+                    <td>Placeat?</td>
+                    <td>Libero.</td>
+                </tr>
+                <tr>
+                    <td>Lorem.</td>
+                    <td>Consequuntur!</td>
+                    <td>Eligendi.</td>
+                    <td>Ipsam!</td>
+                </tr>
+                <tr>
+                    <td>Lorem.</td>
+                    <td>Accusantium?</td>
+                    <td>Eos.</td>
+                    <td>Eius?</td>
+                </tr>
+                <tr>
+                    <td>Lorem.</td>
+                    <td>Itaque?</td>
+                    <td>Eum.</td>
+                    <td>Quaerat?</td>
+                </tr>
+                <tr>
+                    <td>Lorem.</td>
+                    <td>Ex?</td>
+                    <td>Ipsa!</td>
+                    <td>Explicabo?</td>
+                </tr>
+                <tr>
+                    <td>Lorem.</td>
+                    <td>Assumenda!</td>
+                    <td>Harum!</td>
+                    <td>Cum!</td>
+                </tr>
+                <tr>
+                    <td>Lorem.</td>
+                    <td>Accusantium!</td>
+                    <td>Doloribus.</td>
+                    <td>Eaque!</td>
+                </tr>
+            </tbody>
+        </thead>
+    </table>
+
+    <hr />
+
+    <table class="table-hover table-stripe">
+        <thead>
+            <tr>
+                <th>Lorem.</th>
+                <th>Perferendis.</th>
+                <th>Doloremque.</th>
+                <th>At.</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>Lorem.</td>
+                    <td>Corrupti.</td>
+                    <td>Molestiae.</td>
+                    <td>Tenetur?</td>
+                </tr>
+                <tr>
+                    <td>Lorem.</td>
+                    <td>Earum?</td>
+                    <td>Iure?</td>
+                    <td>Voluptates.</td>
+                </tr>
+                <tr>
+                    <td>Lorem.</td>
+                    <td>Nobis.</td>
+                    <td>Corrupti.</td>
+                    <td>Itaque?</td>
+                </tr>
+                <tr>
+                    <td>Lorem.</td>
+                    <td>Maiores?</td>
+                    <td>Magni.</td>
+                    <td>Nesciunt.</td>
+                </tr>
+                <tr>
+                    <td>Lorem.</td>
+                    <td>Voluptates.</td>
+                    <td>Qui!</td>
+                    <td>Molestias.</td>
+                </tr>
+                <tr>
+                    <td>Lorem.</td>
+                    <td>Repudiandae.</td>
+                    <td>Eius?</td>
+                    <td>Culpa.</td>
+                </tr>
+                <tr>
+                    <td>Lorem.</td>
+                    <td>Nostrum.</td>
+                    <td>Quo?</td>
+                    <td>Id!</td>
+                </tr>
+                <tr>
+                    <td>Lorem.</td>
+                    <td>Architecto?</td>
+                    <td>Obcaecati.</td>
+                    <td>Modi.</td>
+                </tr>
+            </tbody>
+        </thead>
+    </table>
+
+    <hr />
+    
+    <!-- table>thead>tr>th*4>lorem1^^tbody[style="text-align:center"]>tr*6>td{$}+td*3>lorem1 -->
+    <table>
+        <thead>
+            <tr>
+                <th>Lorem.</th>
+                <th>Tenetur.</th>
+                <th>Blanditiis?</th>
+                <th>Quos?</th>
+            </tr>
+            <tbody style="text-align:center">
+                <tr>
+                    <td>1</td>
+                    <td>Lorem.</td>
+                    <td>Deserunt!</td>
+                    <td>In.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Lorem.</td>
+                    <td>In?</td>
+                    <td>Neque.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Lorem.</td>
+                    <td>Laboriosam.</td>
+                    <td>Pariatur?</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Lorem.</td>
+                    <td>Sapiente.</td>
+                    <td>Tempore?</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Lorem.</td>
+                    <td>Fugit!</td>
+                    <td>Animi!</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Lorem.</td>
+                    <td>Eos!</td>
+                    <td>Vero.</td>
+                </tr>
+            </tbody>
+        </thead>
+    </table>
+
+</body>
+</html>
+
