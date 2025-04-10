@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div:nth-child(odd) {
+            background-color: skyblue;
+        }
+        div:nth-child(even) {
+            background-color: gold;
+        }
+        /* 위아래 margin 겹쳐진다 */
+        #box1 {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        #box2 {
+            margin-top: 10px;
+            margin-bottom: 12px;
+        }
+        #box5 {
+            margin: 10px 15px;
+        }
+        #box6 {
+            margin-left: 15px;
+        }
+        /* 7, 8번 박스에 좌우margin 적용 */
+        #box7 {
+            margin-right: 20px;
+        }
+        #box8 {
+            margin-left: 15px;
+        }
+
+        #box11, #box12, #box17, #box18 {
+            margin: 10px 20px;
+        }
+        #box13, #box14, #box15, #box16 {
+            margin: 20px auto;
+        }
+        div:last-child > div:not([id*="box"]) {
+            border: 3px double black;
+        }
+    </style>
+</head>
+<body>
+    <!-- #box$*4{$} -->
+    <div id="box1">1</div>
+    <div id="box2">2</div>
+    <div id="box3">3</div>
+    <div id="box4">4</div>
+
+    <hr />
+    <div style="display: flex; background-color: gray;">
+        <!-- div#box$@5*4{$@5} -->
+        <div id="box5">5</div>
+        <div id="box6">6</div>
+        <div id="box7">7</div>
+        <div id="box8">8</div>
+    </div>
+
+    <hr />
+    <div>
+        <div style="display: flex; background-color: gainsboro;">
+            <!-- #box$@11*4{$@11} -->
+            <div id="box11">11</div>
+            <div id="box12">12</div>
+            <div id="box13">13</div>
+            <div id="box14">14</div>
+        </div>
+        <div style="display: flex; background-color: gray;">
+            <!-- #box$@15*4{$@15} -->
+            <div id="box15">15</div>
+            <div id="box16">16</div>
+            <div id="box17">17</div>
+            <div id="box18">18</div>
+        </div>
+    </div>
+</body>
+</html>
