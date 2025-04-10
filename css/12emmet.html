@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <!-- element selector -->
+    <h1></h1>
+    <p></p>
+    <!-- 여러개 *숫자 -->
+
+    <!-- 형제 selector + -->
+    <!-- h3+p -->
+    <h3></h3>
+    <p></p>
+    <!-- 자식 selector > -->
+    <!-- h3>img -->
+    <h3><img src="" alt="" /></h3>
+    <!-- ul>li*3 -->
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <!-- h3>a+img -->
+    <h3><a href=""></a><img src="" alt="" /></h3>
+    <!-- h3>a>img -->
+    <h3>
+      <a href=""><img src="" alt="" /></a>
+    </h3>
+    <!-- class selector -->
+    <!-- h3.header -->
+    <h3 class="header"></h3>
+    <!-- p.note*3 -->
+    <p class="note"></p>
+    <p class="note"></p>
+    <p class="note"></p>
+
+    <!-- id selector #  -->
+    <!-- h3#header1 -->
+    <h3 id="header1"></h3>
+    <!-- p#note10 -->
+    <p id="note10"></p>
+
+    <!-- 번호증가 $*숫자 -->
+    <!-- p#note$*3 -->
+    <p id="note1"></p>
+    <p id="note2"></p>
+    <p id="note3"></p>
+
+    <!-- div -->
+    <div class="header"></div>
+    <!-- div.header -->
+    <div class="header"></div>
+    <!-- .header -->
+    <div class="header"></div>
+
+    <!-- div#spe1.note.error -->
+    <div id="spe1" class="note error"></div>
+    <!-- #spe2.note.error -->
+    <div id="spe2" class="note error"></div>
+
+    <!-- table>thead+tbody -->
+    <table>
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- 한 부모 위로 ^ (carret)  -->
+    <!-- table>thead>tr^tbody -->
+    <table>
+        <thead>
+            <tr></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <!-- table>thead>tr>td*3^^tbody -->
+    <table>
+        <thead>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <!-- table>thead>tr>th*3>lorem1^^^tbody -->
+    <table>
+        <thead>
+            <tr>
+                <th>Lorem.</th>
+                <th>Numquam?</th>
+                <th>Quam.</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <!-- table>thead>tr>th*3>lorem1^^^tbody>tr*4>td*3>lorem1 -->
+    <table>
+        <thead>
+            <tr>
+                <th>Lorem.</th>
+                <th>Voluptatibus?</th>
+                <th>Natus.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lorem.</td>
+                <td>Magni?</td>
+                <td>Nobis!</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Ducimus.</td>
+                <td>Quos.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Soluta.</td>
+                <td>Porro.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Molestiae.</td>
+                <td>Mollitia!</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- table#table1.striped>thead>tr>th.table-header*4>lorem1^^^tbody>tr*3>td.table-cell*4>lorem1 -->
+    <table id="table1" class="striped">
+        <thead>
+            <tr>
+                <th class="table-header">Lorem.</th>
+                <th class="table-header">Incidunt.</th>
+                <th class="table-header">Aliquid.</th>
+                <th class="table-header">Officiis!</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="table-cell">Lorem.</td>
+                <td class="table-cell">In.</td>
+                <td class="table-cell">Maiores?</td>
+                <td class="table-cell">Adipisci!</td>
+            </tr>
+            <tr>
+                <td class="table-cell">Lorem.</td>
+                <td class="table-cell">Repudiandae.</td>
+                <td class="table-cell">Nulla?</td>
+                <td class="table-cell">Nisi.</td>
+            </tr>
+            <tr>
+                <td class="table-cell">Lorem.</td>
+                <td class="table-cell">Quo!</td>
+                <td class="table-cell">Amet.</td>
+                <td class="table-cell">Nostrum.</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!-- 그룹화 () -->
+    <!-- .container>(header>nav>ul>li*5>a)+(#content>section)+footer -->
+
+    <!-- 속성 포함 [] -->
+    <!-- td[title="name" colspan="5"] -->
+
+    <!-- 텍스트 입력 포함 -->
+    <!-- a.button{Click Me} -->
+
+  </body>
+</html>
