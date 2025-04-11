@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            background-color: beige;
+        }
+        p {
+            background-color: skyblue;
+        }
+        div:nth-child(odd) {
+            background-color: red;
+        }
+        div:nth-child(even) {
+            background-color: blue;
+        }
+        img {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- block 요소: 가능한 넓은 너비, 새로운 줄(범위=line)에 배치. (대표적인 요소: h1, p, div, ..) -->
+    <!-- h1*5>lorem1 -->
+    <h1>Lorem.</h1>
+    <h1>Labore?</h1>
+    <h1>Officiis!</h1>
+    <h1>Quo.</h1>
+    <h1>Officiis!</h1>
+    <h2>Lorem, ipsum dolor.</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, ut!</p>
+    <!-- div*3>lorem -->
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi tempore minus molestiae repellendus veniam consequuntur. Natus rerum repellat maiores eligendi velit, deserunt sunt nisi officiis vel assumenda in est minima.</div>
+    <div>Perferendis obcaecati aliquid nulla repudiandae error aperiam voluptate, dolorum, quia quidem similique ipsa nemo earum voluptas! Quas exercitationem nobis saepe voluptatibus? Corporis atque molestias sed omnis, neque voluptatum eveniet quidem!</div>
+    <div>Fugit, deleniti. Minima earum adipisci soluta eum reprehenderit suscipit eligendi est nesciunt magnam quia voluptatum aperiam ad dolor recusandae magni sed ipsa velit, quasi fuga expedita ipsum. Debitis, odit reiciendis.</div>
+    
+    <!-- inline 요소: 필요한만큼 너비 지정, 같은 line에 배치 (대표적인 요소: a, img, span, ..) -->
+    트럼프 일론 머스크
+    <a href="https://www.daum.net">daum</a>
+    <img src="../html/textIcon1.png" alt="">
+    <span>inline text 1234</span>
+</body>
+</html>
