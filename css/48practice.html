@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- w3schools 상단 메뉴 벤치마킹 -->
+    <style>
+        .nemo-button {
+            padding: 17px;
+        }
+        .nemo-button:hover {
+            background-color: green;
+            color: white;
+        }
+        
+        .logo {
+            font-weight: 900;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .cart-button,
+        .circle-button {
+            padding: 10px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+        }
+        .cart-button {
+            margin-left: auto;
+        }
+        .cart-button:hover {
+            background-color: gainsboro;
+        }
+        .circle-button {
+            background-color: green;
+            color: white;
+        }
+        .circle-button:hover {
+            background-color: rgb(1, 78, 1);
+        }
+        .menu-container {
+            display: flex;
+        }
+
+        .second-top-bar {
+            display: flex;
+            background-color: black;
+        }
+        .second-menu-item {
+            background-color: black;
+            color: white;
+            padding: 16px;
+        }
+        .second-menu-item:hover {
+            background-color: green;
+        }
+
+        .main-content-container {
+            display: flex;
+            height: 100vh;
+        }
+        .side-menu {
+            width: 200px;
+            background-color: #ddd;
+        }
+        .ad-container {
+            width: 170px;
+            background-color: greenyellow;
+        }
+        .main-content {
+            flex: 1;
+        }
+        .side-menu-header {
+            font-size: 20px;
+            padding-left: 16px;
+        }
+        .side-menu-item {
+            padding-left: 26px;
+        }
+        .dide-menu-item:hover {
+            background-color: #eee;
+        }
+        .top-banner {
+            height: 150px;
+            background-color: skyblue;
+        }
+        .navi-button {
+            color: white;
+            background-color: goldenrod;
+            padding: 16px 20px;
+            border-radius: 5px; 
+        }
+        .navi-button-container {
+            display: flex;
+            justify-content: space-between;
+        } 
+        .jumbotron {
+            background-color: #d9eee1;
+            padding: 24px;
+            margin-top: 24px;
+        }
+        .main-content {
+            margin: 24px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="logo">
+            <span>
+                W
+            </span>
+        </div>
+        <div class="nemo-button">
+            Tutorials
+        </div>
+        <div class="nemo-button">
+            Exercises
+        </div>
+        <div class="nemo-button">
+            Certificates
+        </div>
+        <div class="nemo-button">
+            Services
+        </div>
+
+        <div class="cart-button">
+            <span>
+                Get Certified
+            </span>
+        </div>
+
+        <div class="circle-button">
+            <span>
+                Sign Up
+            </span>
+        </div>
+        <div class="circle-button">
+            <span>
+                Log in
+            </span>
+        </div>
+    </div>
+
+    <!-- 두번째 상단바 -->
+     <!-- div.second-top-bar>.second-menu-item*8>lorem1 -->
+     <div class="second-top-bar">
+        <div class="second-menu-item">Lorem.</div>
+        <div class="second-menu-item">Saepe.</div>
+        <div class="second-menu-item">Laudantium?</div>
+        <div class="second-menu-item">Dolorem.</div>
+        <div class="second-menu-item">Quaerat.</div>
+        <div class="second-menu-item">Magnam?</div>
+        <div class="second-menu-item">Atque?</div>
+        <div class="second-menu-item">Quod.</div>
+     </div>
+
+     <!-- .main-content-container>.side-menu+.main-content+.ad-container -->
+     <div class="main-content-container">
+        <div class="side-menu">
+            <h1 class="side-menu-header">
+                HTML Tutorial
+            </h1>
+            <!-- .side-menu-item*30>lorem1 -->
+            <div class="side-menu-item">Lorem.</div>
+            <div class="side-menu-item">Repudiandae?</div>
+            <div class="side-menu-item">Aut.</div>
+            <div class="side-menu-item">Quisquam.</div>
+            <div class="side-menu-item">Commodi.</div>
+            <div class="side-menu-item">Pariatur.</div>
+            <div class="side-menu-item">Et!</div>
+            <div class="side-menu-item">Aperiam.</div>
+            <div class="side-menu-item">Voluptatum.</div>
+            <div class="side-menu-item">Eaque.</div>
+            <div class="side-menu-item">Voluptas.</div>
+            <div class="side-menu-item">Ullam.</div>
+            <div class="side-menu-item">Iusto?</div>
+            <div class="side-menu-item">Cum.</div>
+            <div class="side-menu-item">Quis!</div>
+            <div class="side-menu-item">Cupiditate?</div>
+            <div class="side-menu-item">Rerum.</div>
+            <div class="side-menu-item">Non.</div>
+            <div class="side-menu-item">Nam!</div>
+            <div class="side-menu-item">Fugiat.</div>
+            <div class="side-menu-item">Cumque?</div>
+            <div class="side-menu-item">Rerum.</div>
+            <div class="side-menu-item">Non?</div>
+            <div class="side-menu-item">Vero.</div>
+            <div class="side-menu-item">Ab.</div>
+            <div class="side-menu-item">Aut!</div>
+            <div class="side-menu-item">Fugiat.</div>
+            <div class="side-menu-item">Neque!</div>
+            <div class="side-menu-item">Cum.</div>
+            <div class="side-menu-item">Ipsum.</div>
+        </div>
+        <div class="main-content">
+            <!-- 상단 배너 -->
+             <div class="top-banner">
+
+             </div>
+             <!-- 제목 -->
+              <h1>HTML Tutorial</h1>
+              <!-- 버튼 두 개 -->
+               <div class="navi-button-container">
+                   <div class="navi-button">Home</div>
+                   <div class="navi-button">Next</div>
+               </div>
+               <!-- 점보트론 -->
+                <!-- .jumbotron>h2>lorem2^p*3>lorem8 -->
+                <div class="jumbotron">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Hic dolorum impedit odit commodi pariatur, quae blanditiis.</p>
+                    <p>Nulla, non! Doloremque dignissimos expedita cumque a neque.</p>
+                </div>
+                
+                <hr />
+                <!-- content -->
+                <!-- (h3>lorem2^p>lorem)*5 -->
+                <h3>Lorem, ipsum.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima molestias laboriosam quia incidunt, facere cumque a quas iure? Adipisci tempora hic ducimus odio accusamus excepturi quibusdam assumenda repellat dolorem quos.</p>
+                <h3>Impedit, accusamus.</h3>
+                <p>Quaerat, ea! Consequatur facere ipsam quo quis debitis voluptates ducimus rerum corrupti reprehenderit nihil ullam a perspiciatis, modi corporis voluptatum obcaecati maxime omnis officiis placeat fugiat nulla? Voluptates, a aperiam.</p>
+                <h3>Labore, ipsam.</h3>
+                <p>Voluptatem earum vitae, sunt nulla quod ducimus laboriosam sit aliquam eligendi soluta omnis sequi consequatur velit vel modi temporibus quis? Maxime ad eum eos possimus consequatur atque quidem facilis ullam.</p>
+                <h3>A, dicta!</h3>
+                <p>Accusamus perspiciatis voluptatibus iusto tempore nam velit omnis minima blanditiis magnam quam numquam eaque, optio quos deserunt quibusdam sapiente corporis quaerat odio molestias. Vitae eum pariatur voluptatibus libero impedit sint?</p>
+                <h3>Harum, officiis!</h3>
+                <p>Modi pariatur mollitia, sunt repudiandae ex ea deleniti blanditiis laborum libero quam facilis eos fuga? Optio, voluptas! Nesciunt ullam nostrum blanditiis ea in neque, debitis, consectetur sequi, commodi omnis dolorum.</p>
+        </div>
+
+        <div class="ad-container"></div>
+     </div>
+
+
+</body>
+</html>
