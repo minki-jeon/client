@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 참조: w3schools - W3.CSS Dropdowns || Bootstrap - PopOver -->
+    <style>
+        /* h3 {
+            padding: 0px 60px 0px 20px;
+            background-color: white;
+            margin: 5px;
+        }
+        .hover-dropdown:hover {
+            background-color: gray;
+        } */
+
+        /* top: 상위요소 .container의 높이 2배 */
+        /* z-index: 화면의 전면으로 최우선순위(1) 배치 (다른 요소에 가려지지 않게) */
+        /* .hover-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;          
+            left: 10px;
+            background-color: white;
+            border: 1px solid gray;
+            z-index: 1;         
+        }
+        h1:hover {
+            background-color: gray;
+        }
+        h1:hover+.hover-dropdown {
+            display: block;
+        }
+        .container {
+            position: relative;
+        } */
+        
+        .sub-menu-container {
+            display: none;
+            position: absolute;
+            top: 23px;
+            left: 0px;
+        }
+        .drop-down:hover > .sub-menu-container {
+            display: block;
+        }
+        .drop-down {
+            background: gray;
+            position: relative;
+        }
+        .main-button {
+            width: 150px;
+            height: 23px;
+            background-color: beige;
+        }
+        .main-button:hover {
+            background-color: blanchedalmond;
+        }
+        .sub-menu-item {
+            background-color: white;
+            width: 100px;
+            height: 40px;
+        }
+        .sub-menu-item:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+        <h1>Lorem.</h1>
+        <div class="hover-dropdown">
+            <h3>Lorem.</h3>
+            <h3>Lorem.</h3>
+            <h3>Lorem.</h3>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Non?</h1>
+        <div class="hover-dropdown">
+            <h3>Iure?</h3>
+            <h3>Iure?</h3>
+            <h3>Iure?</h3>
+        </div>
+    </div> -->
+
+    <!-- .drop-down>.main-button{Hover Over Me}+.sub-menu-container>.sub-menu-item{Link$}*3^^p>lorem30 -->
+    <div class="drop-down">
+        <div class="main-button">Hover Over Me</div>
+        <div class="sub-menu-container">
+            <div class="sub-menu-item">Link1</div>
+            <div class="sub-menu-item">Link2</div>
+            <div class="sub-menu-item">Link3</div>
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sunt, quisquam, nisi quia minus mollitia cum praesentium itaque molestiae cumque alias libero quidem assumenda in culpa officia iusto. Rerum, ipsa!</p>
+</body>
+</html>
