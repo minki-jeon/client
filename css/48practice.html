@@ -44,11 +44,23 @@
         }
         .menu-container {
             display: flex;
+            /* position */
+            /* position: fixed;
+            top: 0px;
+            left: 0px;
+            background-color: white;
+            width: 100%; */
+            
         }
 
         .second-top-bar {
             display: flex;
             background-color: black;
+            /* position */
+            /* position: fixed;
+            top: 60px;
+            left: 0px;
+            width: 100%; */
         }
         .second-menu-item {
             background-color: black;
@@ -62,10 +74,14 @@
         .main-content-container {
             display: flex;
             height: 100vh;
+            /* position */
+            /* margin-top: 120px; */
         }
         .side-menu {
             width: 200px;
             background-color: #ddd;
+            /* position */
+            /* position: fixed; */
         }
         .ad-container {
             width: 170px;
@@ -73,6 +89,9 @@
         }
         .main-content {
             flex: 1;
+            margin: 24px;
+            /* position */
+            /* margin-left: 210px; */
         }
         .side-menu-header {
             font-size: 20px;
@@ -103,71 +122,94 @@
             padding: 24px;
             margin-top: 24px;
         }
-        .main-content {
-            margin: 24px;
+        /* top-right button (Sign-up/Log-in) */
+        .move-right {
+            position: relative;
+            left: 30px;
         }
+        .left-padding {
+            padding-left: 35px;
+        }
+
+        
+        /* position */
+        .fixed-top-menu {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            padding: 0px 24px 0px 8px;
+            box-sizing: border-box;
+            background-color: white;
+        }
+
+        .main-content-container {
+            margin-top: 114px;
+        }
+
 
     </style>
 </head>
 <body>
-    <div class="menu-container">
-        <div class="logo">
-            <span>
-                W
-            </span>
-        </div>
-        <div class="nemo-button">
-            <span>
-                Tutorials <i class="fa-solid fa-caret-down"></i>
-            </span>
-        </div>
-        <div class="nemo-button">
-            <span>
-                Exercises <i class="fa-solid fa-caret-down"></i>
-            </span>
-        </div>
-        <div class="nemo-button">
-            <span>
-                Certificates <i class="fa-solid fa-caret-down"></i>
-            </span>
-        </div>
-        <div class="nemo-button">
-            <span>
-                Services <i class="fa-solid fa-caret-down"></i>
-            </span>
+    <div class="fixed-top-menu">    <!-- position fixed 위해 div 추가 -->
+        <div class="menu-container">
+            <div class="logo">
+                <span>
+                    W
+                </span>
+            </div>
+            <div class="nemo-button">
+                <span>
+                    Tutorials <i class="fa-solid fa-caret-down"></i>
+                </span>
+            </div>
+            <div class="nemo-button">
+                <span>
+                    Exercises <i class="fa-solid fa-caret-down"></i>
+                </span>
+            </div>
+            <div class="nemo-button">
+                <span>
+                    Certificates <i class="fa-solid fa-caret-down"></i>
+                </span>
+            </div>
+            <div class="nemo-button">
+                <span>
+                    Services <i class="fa-solid fa-caret-down"></i>
+                </span>
+            </div>
+
+            <div class="cart-button">
+                <span style="color: purple;">
+                    <i class="fa-solid fa-cart-shopping"></i> Get Certified
+                </span>
+            </div>
+
+            <div class="circle-button move-right">
+                <span>
+                    Sign Up
+                </span>
+            </div>
+            <div class="circle-button left-padding">
+                <span>
+                    Log in
+                </span>
+            </div>
         </div>
 
-        <div class="cart-button">
-            <span style="color: purple;">
-                <i class="fa-solid fa-cart-shopping"></i> Get Certified
-            </span>
-        </div>
-
-        <div class="circle-button">
-            <span>
-                Sign Up
-            </span>
-        </div>
-        <div class="circle-button">
-            <span>
-                Log in
-            </span>
+        <!-- 두번째 상단바 -->
+        <!-- div.second-top-bar>.second-menu-item*8>lorem1 -->
+        <div class="second-top-bar">
+            <div class="second-menu-item">Lorem.</div>
+            <div class="second-menu-item">Saepe.</div>
+            <div class="second-menu-item">Laudantium?</div>
+            <div class="second-menu-item">Dolorem.</div>
+            <div class="second-menu-item">Quaerat.</div>
+            <div class="second-menu-item">Magnam?</div>
+            <div class="second-menu-item">Atque?</div>
+            <div class="second-menu-item">Quod.</div>
         </div>
     </div>
-
-    <!-- 두번째 상단바 -->
-     <!-- div.second-top-bar>.second-menu-item*8>lorem1 -->
-     <div class="second-top-bar">
-        <div class="second-menu-item">Lorem.</div>
-        <div class="second-menu-item">Saepe.</div>
-        <div class="second-menu-item">Laudantium?</div>
-        <div class="second-menu-item">Dolorem.</div>
-        <div class="second-menu-item">Quaerat.</div>
-        <div class="second-menu-item">Magnam?</div>
-        <div class="second-menu-item">Atque?</div>
-        <div class="second-menu-item">Quod.</div>
-     </div>
-
      <!-- .main-content-container>.side-menu+.main-content+.ad-container -->
      <div class="main-content-container">
         <div class="side-menu">
