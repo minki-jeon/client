@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container1, #container2, #container3, #container4, #container5 {
+            width: 500px;
+            height: 300px;
+            background-color: skyblue;
+        }
+
+        #item1, #item2, #item3, #item4, #item5 {
+            background-color: beige;
+            width: 100px;
+            height: 50px;
+
+        }
+
+        #item1 {
+            /* 조상(상위) 요소 중 포지션 지정된 요소 기준 */
+            /* = position의 기본값 static이 아닌 조상(상위) 요소 */
+            position: absolute;
+            /* left, right, top, bottom */
+            top: 10px;
+            left: 0px;
+        }
+        #container1 {
+            /* position 기본값 static */
+            position: static;
+        }
+
+        #item2 {
+            /* 조상(상위) 요소의 position: relative 지정한다면, */
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+        #container2 {
+            position: relative;
+        }
+
+        #wrapper3, #wrapper4 {
+            background-color: gold;
+            width: 350px;
+            height: 120px;
+        }
+
+        #item3, #item4 {
+            /* wrapper3: relative 기준 */
+            /* container4: relative 기준 */
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        #wrapper3 {
+            position: relative;
+        }
+        #container4 {
+            position: relative;
+        }
+
+        #item5 {
+            /* 조상(상위) 요소 중에 포지션 지정된 요소가 없으면 */
+            /* root 요소(html) 기준 */
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- #container$*5>#item$>lorem1 -->
+    <div id="container1">
+        <div id="item1">Lorem.</div>
+    </div>
+    <hr />
+
+    <div id="container2">
+        <div id="item2">Ipsa!</div>
+    </div>
+    <hr />
+
+    <div id="container3">
+        <div id="wrapper3">
+            <div id="item3">Mollitia?</div>
+        </div>
+    </div>
+    <hr />
+
+    <div id="container4">
+        <div id="wrapper4">
+            <div id="item4">Reiciendis.</div>
+        </div>
+    </div>
+    <hr />
+
+    <div id="container5">
+        <div id="item5">Pariatur?</div>
+    </div>
+    <hr />
+</body>
+</html>
