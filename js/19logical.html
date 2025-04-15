@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+    
+  </head>
+  <body>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script>
+        /*
+            논리연산자 
+            and( && ), or( || ), not( ! )
+            Return Type: boolean
+        */
+        let a = true;
+        let b = false;
+        console.log(a);     //false
+        console.log(!a);    //true
+        console.log(b);     //false
+        console.log(!b);    //true
+        
+        let c = 3;
+        let d = 5;
+        console.log(c < d);     // true
+        console.log(!(c < d));  // false
+        
+        // AND ( && ): 두 피연산자가 true일 때만 결과 true, 나머지는 모두 false
+        console.log(true && true);          // true
+        console.log(true && false);         // false
+        console.log(false && true);         // false
+        console.log(false && false);        // false
+
+        let e = 10;
+        let f = 20;
+        let g = "hello";
+        let h =  "js";
+        console.log((e < f) && (g < h));    // true && true = true
+
+        let i = 33;
+        console.log((i > 20) && (i < 50));  // true && true = true
+        
+        // OR ( || ): 두 피연산자가 false일 때만 결과 false, 나머지는 모두 true
+        console.log(true || true);          // true
+        console.log(true || false);         // true
+        console.log(false || true);         // true
+        console.log(false || false);        // false
+
+        let j = "trump";
+
+        console.log((j === "donald") || (j === "trump"));       // false || true = true
+        console.log((j === "elon") || (j === "musk"));          // false || false = false
+        
+
+    </script>
+  </body>
+
+</html>
