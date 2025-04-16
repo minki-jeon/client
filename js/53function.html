@@ -25,7 +25,7 @@
             myCode();
             console.log(2);
             
-            // 함수는 먼저 호출하고 나중에 정의 가능하다.
+            // 함수는 먼저 호출하고 나중에 정의 가능하다. (* 함수 선언식에 해당)
             // = function hoisting(호이스팅) 기능 : 해당 범위의 최상단으로 끌어올리는 동작
             function print() {
                 console.log("hello");
@@ -36,7 +36,29 @@
                 console.log("hi");
                 
             }
-            
+
+            /* 
+              함수 표현식 (익명 함수, 기명 함수)
+              hoisting (호이스팅) 발생하지 않는다.
+              함수가 호출 실행되는 시점에서 메모리에 할당되어 불필요한 메모리 점유를 줄일 수 있다. 
+            */
+            // 함수 표현식은 정의하기 전에, 호출 시 오류 발생
+            // f();
+            // g(5);   
+            let f = function() {
+              console.log("익명 함수 정의");
+
+              return 0;         // 기명 함수는 return 되는 함수로, return을 별도로 명시하지 않으면 undefined가 return된다.
+            }
+            let g = function factorial(n) {
+              console.log("기명 함수 정의", n);
+              
+              if (n <= 1) return 1;
+              return n * factorial(n - 1);  // 재귀함수를 사용한 팩토리얼 연산
+            }
+            console.log(g(5));
+            console.log(f());
+
 
         </script>
       </body>
