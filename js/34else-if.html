@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+    
+  </head>
+  <body>
+    점수: <input type="text" id="input1">
+    <br>
+    <button id="btn1" class="btn btn-primary">등급 확인</button>
+    <hr>
+    <h3 id="result"></h3>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script>
+        function check() {
+            let score = document.querySelector("#input1").value;
+            score = Number(score);
+
+            if (score >= 90 && score <= 100) {
+                document.querySelector("#result").innerText = "A 등급";
+            } else if (score >= 80 && score < 90) {
+                document.querySelector("#result").innerText = "B 등급";
+            } else if (score >= 70 && score < 80) {
+                document.querySelector("#result").innerText = "C 등급";
+            } else if (score >= 60 && score < 70) {
+                document.querySelector("#result").innerText = "D 등급";
+            } else if (score >= 0 && score < 60) {
+                document.querySelector("#result").innerText = "F 등급";
+            } else {
+                document.querySelector("#result").innerText = "잘못된 점수입니다.";
+            }
+            
+        }
+        document.querySelector("#btn1").onclick = check;
+        
+    </script>
+  </body>
+
+</html>
