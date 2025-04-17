@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+    
+  </head>
+  <body>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script>
+        let a = 3;
+        let b = function() {
+            console.log("어떤 함수 코드들...");
+        }
+        if (true) {
+            let c = 5;
+            console.log(c);                 // 5
+        
+            let d = function() {
+                console.log("d 함수");
+            }
+            d();                            // "d 함수"
+        }
+
+        let e = 11;
+        let f = function() {
+            console.log("f 함수1");
+        }
+        if (true) {
+            let e = 12;
+            console.log(e);                 // 12
+            let f = function() {
+                console.log("f 함수2");
+            }
+            f();                            // "f 함수2"
+        }
+        console.log(e);                     //  11
+        f();                                // "f 함수1"
+        
+        console.log("======================================");
+        //* 함수 선언식
+        function myCode() {
+            console.log("myCode 1");
+        }
+
+        if (true) {
+            //* 해당 위치에서 호이스팅(hoisting) 기능 동작에 의해 위에 먼저 선언된 myCode() 함수가 오버라이딩(Overriding) 되어진다.
+            function myCode() {             // Overriding
+                console.log("myCode 2");
+            }
+            myCode();                       // "myCode 2"
+        }
+        myCode();                           // "myCode 2"
+
+        function myCode() {                 // Not Overriding
+            console.log("myCode 3");
+        }
+        myCode();                           // "myCode 2"
+
+        
+        if (true) {
+            function myCode() {             // Overriding
+                console.log("myCode 4");
+            }
+        }
+        myCode();                           // "myCode 4"
+
+        function myCode() {
+            console.log("myCode 5");        // Not Overriding
+        }
+        myCode();                           // "myCode 4"
+                
+        
+
+        console.log("======================================");
+        //* 함수 표현식
+        
+        let func1 = function myCode() {
+            console.log("myCode func 1"); 
+        }
+        func1();                                        // "myCode func 1"
+
+        if (true) {
+            func1 = function myCode() {
+                console.log("myCode func 2");
+            }
+        }
+        func1();                                        // "myCode func 2"
+
+        func1 = function myCode() {
+            console.log("myCode func 1");
+        }
+        func1();                                        // "myCode func 1"
+
+        console.log("======================================");
+        
+        // function yourCode
+        function yourCode() {
+            let a = function() {
+                console.log("a 함수");
+            }
+            a();                                    // "a 함수"
+            function b() {
+                console.log("b 함수");
+            }
+            b();                                    // "b 함수"
+        }
+        yourCode();
+        b();                                        // "어떤 함수 코드들..."
+        
+
+
+    </script>
+  </body>
+
+</html>
