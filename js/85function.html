@@ -12,6 +12,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     <script>
+        
         let a = 3;
         let b = function() {
             console.log("어떤 함수 코드들...");
@@ -43,37 +44,63 @@
         
         console.log("======================================");
         //* 함수 선언식
-        function myCode() {
+        function myCode() {                 // <Load 1> hoisting
             console.log("myCode 1");
         }
-
+        myCode();                           // "myCode 5"
         if (true) {
-            //* 해당 위치에서 호이스팅(hoisting) 기능 동작에 의해 위에 먼저 선언된 myCode() 함수가 오버라이딩(Overriding) 되어진다.
-            function myCode() {             // Overriding
+            function myCode() {             // <Load 4> Overriding
                 console.log("myCode 2");
             }
             myCode();                       // "myCode 2"
         }
         myCode();                           // "myCode 2"
 
-        function myCode() {                 // Not Overriding
+        function myCode() {                 // <Load 2> hoisting 
             console.log("myCode 3");
         }
         myCode();                           // "myCode 2"
 
         
         if (true) {
-            function myCode() {             // Overriding
+            function myCode() {             // <Load 5> Ovrriding 
                 console.log("myCode 4");
             }
         }
         myCode();                           // "myCode 4"
 
-        function myCode() {
-            console.log("myCode 5");        // Not Overriding
+        function myCode() {                 // <Load 3> hoising
+            console.log("myCode 5");        
         }
         myCode();                           // "myCode 4"
                 
+        /*
+            ## myCode() 함수 메모리 Load 순서 (1 ~ 5) ##
+            -- Page Load (script 실행 전 - 기명함수는 페이지 로드하면서 가장 먼저 호이스팅)
+            (1) function myCode() { console.log("myCode 1"); }
+            (2) function myCode() { console.log("myCode 3"); }
+            (3) function myCode() { console.log("myCode 5"); }
+            -- script 실행되면서
+            -- 첫번째 if 실행 이후
+            (4) function myCode() { console.log("myCode 2"); }
+            -- 두번째 if 실해 이후
+            (5) function myCode() { console.log("myCode 4"); }
+
+            ## myCode() 실행 순서 [1 ~ 6] ##
+            [1] 호이스팅에 의해 (1),(2),(3) 순차적으로 오버라이딩되어 {console.log("myCode 5");} 실행
+            [2] 첫 번째 if문 내에 선언된 기명함수가 Load되면서 (3)myCode 함수에 오버라이딩되어 {console.log("myCode 2");} 실행
+            [3] [2] 실행 이후 오버라이딩 되는 myCode 함수가 없으므로 동일하게 {console.log("myCode 2");} 실행
+            [4] 앞의 (2)myCode 함수는 페이지 로드와 동시에 이미 호이스팅에 의해 오버라이딩된 함수이므로 {console.log("myCode 2");} 실행
+            [5] 두 번째 if문 내에 선언된 기명함수가 Load되면서 (4)myCode 함수에 오버라이딩되어 {console.log("myCode 4");} 실행
+            [6] [5] 실행 이후 오버라이딩 되는 myCode 함수가 없으므로 동일하게 {console.log("myCode 4");} 실행
+
+            ## console.log 결과 ##
+            myCode 2
+            myCode 2
+            myCode 2
+            myCode 4
+            myCode 4
+        */
         
 
         console.log("======================================");
@@ -97,7 +124,7 @@
         func1();                                        // "myCode func 1"
 
         console.log("======================================");
-        
+      
         // function yourCode
         function yourCode() {
             let a = function() {
@@ -110,8 +137,7 @@
             b();                                    // "b 함수"
         }
         yourCode();
-        b();                                        // "어떤 함수 코드들..."
-        
+        b();                                        // "어떤 함수 코드들..."       
 
 
     </script>
