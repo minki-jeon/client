@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+    
+  </head>
+  <body>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script>
+        let a = {
+            name: "trump", 
+            address: "newyork", 
+            email: "gmail", 
+            age: 77, 
+            job: "president",
+
+            //Method: 값이 함수인 Property
+            print: function() {
+                console.log("hello");
+            },
+            show: () => {
+                console.log("usa");
+            }
+        };
+        console.log(a.name);        // trump
+        //객체 내의 함수 Method 호출
+        a.print();
+        a.show();
+
+        let b = {
+            hello: () => console.log("hello"),
+            greeting: () => console.log("안녕하세요"),
+        };
+        b.hello();      // hello
+        b.greeting();   // 안녕하세요
+        
+    </script>
+  </body>
+
+</html>
