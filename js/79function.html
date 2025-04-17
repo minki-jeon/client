@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+    
+  </head>
+  <body>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script>
+        function afunc(param) {
+            console.log(param);
+        }
+        afunc(5);
+        afunc(7);
+
+        function bfunc(param) {
+            param();
+        }
+        function func1() {
+            console.log("func1 함수");
+        }
+        let func2 = function() {
+            console.log("func2 함수");
+        }
+        // let func3 = function() {
+        //     console.log("func3 함수");
+        // }
+
+        bfunc(func1);
+        bfunc(func2);
+        bfunc(function() {
+            console.log("func3 함수");
+        });
+
+    </script>
+  </body>
+
+</html>
