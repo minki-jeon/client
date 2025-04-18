@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+</head>
+<body>
+    <h1>객체</h1>
+    <p>키와 값으로 이루어진 데이터 구조</p>
+
+    <script>
+        // 객체 리터럴
+        const person = {
+            name: '홍길동',
+            age: 25,
+            isStudent: false,
+            // greet: function() {
+            //     console.log('안녕하세요!');
+            // }
+        };
+
+        // Object() 생성자
+        // 객체명.키 = 값
+        const member = new Object();
+        member.userid = 'abc123';
+        member.passwd = '987xyz';
+        member.email = 'abc123@987xyz.co.kr';
+
+
+
+
+        // 객체 속성 접근 : 점 표기법
+        // 객체명.속성명
+        console.log(person.name);
+        console.log(person.age);
+        console.log(person.isStudent);
+        
+        // 객체 속성 접근 : 대괄호 표기법
+        // 객체명['속성명']
+        console.log(member['userid']);
+        console.log(member['passwd']);
+        console.log(member['name']);
+        console.log(member['email']);
+        
+        // 객체 반복 처리 - 키를 이용해서 값을 출력
+        for (let key in person) {
+            console.log(key, person[key]);
+        }
+
+        // 객체구조분해 : ES6에서 추가
+        // {키1, 키2, ... } = 객체명
+        const { name, age, isStudent } = person;
+        console.log(name, age, isStudent);
+        
+        // 기타 유용한 메서드
+        // Object.keys(객체)
+        // Object.values(객체)
+        // Object.entries(객체)
+        console.log(Object.keys(member));
+        console.log(Object.values(member));
+        console.log(Object.entries(member));
+        
+
+
+
+    </script>
+</body>
+</html>
