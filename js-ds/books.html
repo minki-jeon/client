@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도서 정보</title>
+</head>
+<body>
+    <h1>도서 정보</h1>
+
+
+    <script>
+        /*
+            사용자로부터 총 3권의 도서 정보(책 제목, 저자, 가격)를 입력받아 객체로 저장하고
+            모든 도서 정보를 출력하고, 가장 비싼 책의 정보를 출력
+        */
+        const comparePrice = (a, b) => {
+            return Number(a.price) < Number(b.price) ? b : a; 
+        }
+
+        let expensiveBook = {price: 0};
+        let books = []
+        for (let i = 0; i < 3; i++) {
+            let book = new Object();
+            book.title = prompt("책의 제목을 입력하세요.");
+            book.author = prompt("책의 저자를 입력하세요.");
+            book.price = prompt("책의 가격을 입력하세요.");
+
+            expensiveBook = comparePrice(expensiveBook, book);
+
+            books.push(book);
+        }
+
+
+        let result = "";
+        for (let b of books) {
+            result += `제목: ${b.title}, 저자: ${b.author}, 가격: ${b.price} <p>`;
+        }
+        result += `<hr>`;
+        result += `가장 비싼 책의 정보는 <br>`;
+        result += `제목: ${expensiveBook.title}, 저자: ${expensiveBook.author}, 가격: ${expensiveBook.price} <p>`;
+        
+        document.write(result);
+
+
+    </script>
+
+</body>
+</html>
