@@ -1,0 +1,61 @@
+<!-- html:5 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적처리프로그램</title>
+</head>
+<body>
+    <h1>성적 처리 프로그램</h1>
+
+    <script>
+        // 평균점수로 학점 계산
+        const getGrade = (avg) => {
+            let grd = '가';
+            if (avg >= 90) grd = '수';
+            else if (avg >= 80) grd = '우';
+            else if (avg >= 70) grd = '미';
+            else if (avg >= 60) grd = '양';
+            
+            return grd;
+        }
+    </script>
+
+    <script>
+        // 입력 - 이름, 국어, 영어, 수학
+        let names = [];
+        let kors = [];
+        let engs = [];
+        let maths = [];
+        for (let i = 0; i < 3; i++) {
+            names.push(prompt("이름을 입력하세요."));
+            kors.push(Number(prompt("국어을 입력하세요.")));
+            engs.push(Number(prompt("영어을 입력하세요.")));
+            maths.push(Number(prompt("수학을 입력하세요.")));
+        }
+
+        // 처리
+        let tots = [];
+        let avgs = [];
+        let grds = [];
+
+        for (let i = 0; i < names.length; i++) {
+            tots.push(kors[i] + engs[i] + maths[i]);
+            avgs.push(tots[i] / 3);
+            grds.push(getGrade(avgs[i]));    // 함수 구현
+        }
+
+        // 출력
+        let result = "";
+        for (let i = 0; i < names.length; i++) {
+            result += `이름 : ${names[i]}, 국어: ${kors[i]}, 영어: ${engs[i]}, 수학 : ${maths[i]} <br>`;
+            result += ` 총점 : ${tots[i]}, 평균 : ${avgs[i]}, 학점 : ${grds[i].toFixed(1)} <p>`;
+
+            }
+        document.write(result);
+
+
+    </script>
+</body>
+</html>
