@@ -1,0 +1,76 @@
+<!-- html:5 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>배열</h1>
+    <p>배열은 대괄호로 생성</p>
+    <p>배열은 인덱스는 0부터 시작</p>
+    <p>다양한 자료형(숫자, 문자열, 객체)을 배열로 선언 가능</p>
+    <p>push, pop, foreach, map, filter 등의 method 제공</p>
+
+    <script>
+        // 배열 생성 방법
+        // Literal 방식
+        let fruits = ['apple', 'banana', 'peach', 'orange'];
+
+        // Array 생성자
+        let menus = new Array('김밥', '자장면', '돈가스', '라면');
+
+        // 배열 접근: 변수명[index]
+        // 배열 크기 (개수): 변수명.length
+        console.log(menus[0]);
+        console.log(menus[1]);
+        console.log(menus[2]);
+        console.log(menus[3]);
+        console.log(menus.length);
+        
+        // 배열 순회 : 전통방식
+        for (let i = 0; i < 4; i++) {
+            console.log(menus[i]);
+        }
+
+        // 배열 순회 : foreach(처리함수), 함수형 스타일, 사용권장
+        fruits.forEach(fruits => {
+            console.log(fruits);
+        });
+        fruits.forEach((fruits, idx) => {
+            console.log(idx, fruits);
+        });
+
+        // 배열 순회: for .. of
+        for(let menu of menus) {
+            console.log(menu);            
+        }
+
+        // 배열 순회: for .. in, 배열의 인덱스 활용
+        for(let idx in fruits) {
+            console.log(idx, fruits[idx]);            
+        }
+        
+    </script>
+    <script>
+        let games = [];
+
+        // 배열에 요소 추가
+        games.push('디아블로');
+        games.push('오버워치');
+        games.push('리그오브레전드');
+        for(let game of games) {
+            console.log(game);
+        }
+        // 선입후출 (Stack)
+        console.log(games.pop());
+        console.log(games.pop());
+        console.log(games.pop());
+        
+
+
+    </script>
+
+</body>
+</html>
