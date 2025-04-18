@@ -1,0 +1,56 @@
+<!-- html:5 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적처리프로그램</title>
+</head>
+<body>
+    <h1>성적 처리 프로그램</h1>
+    <script>
+        // 간단한 경고 대화상자 출력
+        // alert("Hello, world!!");
+
+        // 간단한 입력 대화상자 출력
+        // let sayHello = prompt("인사말을 입력하세요!");
+        // document.write(sayHello);
+        // console.log(sayHello);
+    </script>
+    <script>
+        // 입력
+        let name = prompt("이름을 입력하세요.");
+        let n1 = prompt("국어을 입력하세요.");
+        let n2 = prompt("영어을 입력하세요.");
+        let n3 = prompt("수학을 입력하세요.");
+        
+        // 처리
+        let tot = Number(n1) + Number(n2) + Number(n3);
+        let avg = tot / 3;
+        // let grd = avg >= 90 ? "A" : avg >= 80 ? "B" : avg >= 70 ? "C" : avg >= 60 ? "D" : avg >= 0 ? "F" : "Error" ;
+        let grd = '가';
+        if (avg >= 90) grd = '수';
+        else if (avg >= 80) grd = '우';
+        else if (avg >= 70) grd = '미';
+        else if (avg >= 60) grd = '양';
+
+        // 출력
+        // document.write("이름 : " + name + "<br>");
+        // document.write("국어: " + n1 + "<br>");
+        // document.write("영어: " + n2 + "<br>");
+        // document.write("수학 : " + n3 + "<br>");
+        // document.write("총점 : " + tot + "<br>");
+        // // document.write("평균 : " + Math.floor(avg) + "<br>");
+        // document.write("평균 : " + avg.toFixed(1) + "<br>");
+        // document.write("학점 : " + grd + "<br>");
+
+        document.write(`이름 : ${name} <br>`);
+        document.write(`국어: ${n1} <br>`);
+        document.write(`영어: ${n2} <br>`);
+        document.write(`수학 : ${n3} <br>`);
+        document.write(`총점 : ${tot} <br>`);
+        document.write(`평균 : ${avg.toFixed(1)} <br>`);
+        document.write(`학점 : ${grd} <br>`);
+    </script>
+</body>
+</html>
