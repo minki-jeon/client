@@ -1,0 +1,63 @@
+<!-- html:5 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적처리프로그램</title>
+</head>
+<body>
+    <h1>성적 처리 프로그램</h1>
+
+    <script>
+        // 평균점수로 학점 계산
+        const getGrade = (sj) => {
+            let grd = '가';
+            if (sj.avg >= 90) grd = '수';
+            else if (sj.avg >= 80) grd = '우';
+            else if (sj.avg >= 70) grd = '미';
+            else if (sj.avg >= 60) grd = '양';
+            
+            return grd;
+        }
+    </script>
+
+    <script>
+        
+        // 입력 - 이름, 국어, 영어, 수학
+        // 각 학생에 대한 성적데이터를 저장하기 위한 배열
+        let sungjuks = [];
+        for (let i = 0; i < 3; i++) {
+            let sungjuk = new Object();
+            sungjuk.name = prompt("이름을 입력하세요.");
+            sungjuk.kor = Number(prompt("국어을 입력하세요."));
+            sungjuk.eng = Number(prompt("영어을 입력하세요."));
+            sungjuk.math = Number(prompt("수학을 입력하세요."));
+
+            // 처리
+            sungjuk.tot = sungjuk.kor + sungjuk.eng + sungjuk.math;
+            sungjuk.avg = (sungjuk.tot / 3).toFixed(1);
+            sungjuk.grd = getGrade(sungjuk);
+
+            //처리된 성적 데이터를 배열에 저장
+            sungjuks.push(sungjuk);
+        }
+
+        // 출력
+        let result = "";
+        for (let sj of sungjuks) {
+            result += `이름 : ${sj.name}, 국어: ${sj.kor}, 영어: ${sj.eng}, 수학 : ${sj.math} <br>`;
+            result += ` 총점 : ${sj.tot}, 평균 : ${sj.avg}, 학점 : ${sj.grd} <p>`;
+            }
+        document.write(result);
+
+        sungjuks = JSON.stringify(sungjuks);
+        localStorage.setItem("sungjuks", sungjuks);
+
+    </script>
+
+    <p><a href="sungjuk05b.html">성적데이터 조회</a></p>
+
+
+</body>
+</html>

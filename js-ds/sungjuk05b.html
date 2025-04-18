@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적 처리 프로그램</title>
+</head>
+<body>
+    <h1>성적 처리 프로그램</h1>
+
+
+    <script>
+        // 입력
+        // LocalStorage에 저장된 데이터들을 각 변수로 읽어옴
+        // localStorage.getItem(key);
+        // 역직렬화: JSON.parse(object);
+        let sungjuks = JSON.parse(localStorage.getItem("sungjuks"));
+
+        // 출력
+        let result = "";
+        for (let sj of sungjuks) {
+            result += `이름 : ${sj.name}, 국어: ${sj.kor}, 영어: ${sj.eng}, 수학 : ${sj.math} <br>`;
+            result += ` 총점 : ${sj.tot}, 평균 : ${sj.avg}, 학점 : ${sj.grd} <p>`;
+        }
+        document.write(result);
+
+    </script>
+</body>
+</html>
