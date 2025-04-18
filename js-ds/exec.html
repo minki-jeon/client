@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적처리프로그램</title>
+</head>
+<body>
+    <h1>성적 처리 프로그램 - 개인실습</h1>
+    <script>
+        let list = [];
+        for (let i = 0; i < 3; i++) {
+            // 입력
+            let name = prompt("이름을 입력하세요.");
+            let n1 = prompt("국어을 입력하세요.");
+            let n2 = prompt("영어을 입력하세요.");
+            let n3 = prompt("수학을 입력하세요.");
+            
+            // 처리
+            let tot = Number(n1) + Number(n2) + Number(n3);
+            let avg = tot / 3;
+            let grd = avg >= 90 ? "A" : avg >= 80 ? "B" : avg >= 70 ? "C" : avg >= 60 ? "D" : avg >= 0 ? "F" : "Error" ;
+        
+            // 저장
+            list.push({"name": name, "n1": n1, "n2": n2, "n3": n3, "tot": tot, "avg": avg.toFixed(1), "grd": grd});
+        }
+
+        // 출력
+        list.forEach(a => {
+            document.write(`이름 : ${a.name}, 국어: ${a.n1}, 영어: ${a.n2}, 수학 : ${a.n3} <br>`);
+            document.write(`총점 : ${a.tot}, 평균 : ${a.avg}, 학점 : ${a.grd}`);
+            document.write(`<hr>`);
+        });
+    </script>
+</body>
+</html>
