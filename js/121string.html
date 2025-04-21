@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+    
+  </head>
+  <body>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script>
+        // substring, slice, substr : 시작위치와 종료위치로 부분 문자열 추출해서 리턴
+        let a = "javascript";
+        let b = a.substring(0, 4);
+        console.log(b);         // java
+        console.log(a.substring(4, 7));     // scr
+        console.log(a.substring(4));        // script
+        console.log(a.substring(4, 10));        // script
+        
+        let c = ["java,spring,boot", "python,django,ai", "javascript,node,next", "html,react,vue", "jsp,servlet,thymeleaf"];
+
+        // let d = [];
+        // for (let i = 0; i < c.length; i++) {
+        //     d.push(c[i].substring(c[i].indexOf(",") + 1, c[i].indexOf(",", c[i].indexOf(",") + 1)))
+        // }
+        // console.log(d);     // ["spring", "django", "node", "react", "servlet"]
+
+        let d = c.map((e) => {
+            let firstComma = e.indexOf(",");
+            let secondComma = e.indexOf(",", firstComma + 1);
+            let secondWord = e.substring(firstComma + 1, secondComma);
+
+            return secondWord;
+        })
+        console.log(d);     // ["spring", "django", "node", "react", "servlet"]
+        
+    </script>
+  </body>
+
+</html>
