@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+    
+  </head>
+  <body>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script>
+        // filter: 파라미터로 받은 함수에 각 아이템을 넣어서 true(truthy)로 리턴된 아이템들만 모은 새 배열 리턴
+
+        let a = [1, 6, 7, 8, 8, 5, 10];
+        let fun1 = function(e) {
+            console.log("fun1 함수", e);
+            return e % 2 === 0;
+        }
+        let b = a.filter(fun1);
+        console.log(b);
+        console.log(a);
+        
+        let c =  a. filter(function(e) {
+            return e % 2 === 0;
+        });
+        console.log(c);
+        let d = a.filter(e => e % 2 === 0);
+        console.log(d);
+        
+        let e = a.filter(e => e % 2 === 1);
+        let f = a.filter(e => e % 2);
+        console.log(e);
+        console.log(f);
+
+        // 3의 배수 + 오름차순 정렬
+        let g = [9, 8, 99, 900, 3, 33, 3, 6, 2];
+        let h = g.filter(e => e % 3 === 0)
+                .sort((a, b) => a - b)
+                .forEach(e => console.log(e));
+        
+
+
+
+        
+    </script>
+  </body>
+
+</html>
