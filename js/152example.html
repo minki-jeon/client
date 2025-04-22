@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+    <style>
+        .done {
+            /* 텍스트에 줄긋기 */
+            text-decoration-line: line-through;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- input#input1+button#btn1{+}+hr+ul#list1 -->
+    <input type="text" id="input1">
+    <button id="btn1">+</button>
+    <hr>
+    <ul id="list1">
+        <!-- <li>abc <button>완료/취소</button> <button>삭제</button></li> -->
+    </ul>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script>
+        document.querySelector("#btn1").addEventListener("click", function() {
+            // ul 생성
+            let v = document.querySelector("#input1").value;
+            let li = document.createElement("li");
+            let list = document.querySelector("#list1");
+            li.textContent = v;
+            // 완료 버튼 생성
+            let btn1 = document.createElement("button");
+            btn1.textContent = "완료";
+            li.append(btn1);
+            // 삭제 버튼 생성
+            let btn2 = document.createElement("button");
+            btn2.textContent = "삭제";
+            li.append(btn2);
+
+            // li 추가
+            list.prepend(li);
+            
+            // 완료 버튼 toggle 적용
+            btn1.addEventListener("click", () => {
+                btn1.parentElement.classList.toggle("done");
+
+                if (btn1.parentElement.classList.contains("done")) {
+                    btn1.textContent = "취소";
+                } else {
+                    btn1.textContent = "완료";
+                }
+            })
+            
+            // 삭제 버튼에 클릭이벤트 추가
+            btn2.addEventListener("click", () => {
+                li.remove();
+            });
+
+
+            // 커서이동 + text 초기화
+            this.previousElementSibling.value = "";
+            this.previousElementSibling.focus();
+        })
+
+
+    </script>
+  </body>
+
+</html>
