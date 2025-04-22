@@ -14,12 +14,14 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     <script>
-        let text = document.querySelector("#input1");
-        let word = document.querySelector("#head1");
-
-        // input에 작성되는 텍스트가 h3에 바로 출력
-        text.onkeyup = () => { word.textContent = text.value; }
-        
+        // let text = document.querySelector("#input1");
+        // let word = document.querySelector("#head1");
+        // // input에 작성되는 텍스트가 h3에 바로 출력
+        // text.onkeyup = () => { word.textContent = text.value; }
+        document.querySelector("#input1").addEventListener("keyup", function() {
+            let v = doc.querySelector("#input1").value;
+            document.querySelector("#head1").innerHTML = v;
+        });
     </script>
   </body>
 
