@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+    
+  </head>
+  <style>
+    .done {
+        /* 텍스트에 줄긋기 */
+        text-decoration-line: line-through;
+    }
+  </style>
+  <body>
+    <!-- ul#list1>li*10>lorem1+button{완료} -->
+    <ul id="list1">
+        <li>Lorem.<button>완료</button></li>
+        <li>Sapiente.<button>완료</button></li>
+        <li>Quaerat.<button>완료</button></li>
+        <li>Iure.<button>완료</button></li>
+        <li>Tempore?<button>완료</button></li>
+        <li>Illo.<button>완료</button></li>
+        <li>Harum?<button>완료</button></li>
+        <li>Sit?<button>완료</button></li>
+        <li>Laboriosam!<button>완료</button></li>
+        <li>Rem!<button>완료</button></li>
+    </ul>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script>
+        let buttons = document.querySelectorAll("button");
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("click", () => {
+                // buttons[i].parentElement.classList.add("done");
+                buttons[i].parentElement.classList.toggle("done");
+
+                if (buttons[i].parentElement.classList.contains("done")) {
+                    buttons[i].textContent = "취소";
+                } else {
+                    buttons[i].textContent = "완료";
+                }
+            });
+        }
+        
+    </script>
+  </body>
+
+</html>
