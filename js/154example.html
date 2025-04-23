@@ -37,6 +37,8 @@
             <div class="col">
                 <!-- ul#list1.list-group -->
                 <ul id="list1" class="list-group">
+
+
                     <!-- li.list-group-item.d-flex.justify-content-between*5>div*2 -->
                     <li class="list-group-item d-flex justify-content-between">
                         <div>빨래</div>
@@ -108,6 +110,9 @@
                             </div>
                         </div>
                     </li>
+
+
+                    
                 </ul>
             </div>
         </div>
@@ -115,7 +120,81 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     <script>
-        
+        // 각 list-buttons 요소에 사용할 ID Number 
+        let globalSequence = 0;
+
+        // + 버튼 클릭 동작 이벤트
+        document.querySelector("#btn1").addEventListener("click", function() {
+            globalSequence++;
+            let sequence = globalSequence;  // 완료 버튼 동작의 버그 처리를 위한 seq 변수
+
+            // input의 value 가져오기
+            let input = document.querySelector("#input1");
+            let v = input.value;
+            
+            // input value 초기화
+            input.value = "";
+            input.focus();
+
+/*            
+            // li 신규 생성
+            let newItem = document.createElement("li");
+            let newDiv = document.createElement("div");
+            newDiv.textContent = v;
+            newItem.append(newDiv);
+            newItem.className = "list-group-item d-flex justify-content-between";
+*/
+            // li 신규 생성
+            let newItem = document.createElement("li");
+            newItem.className = "list-group-item d-flex justify-content-between";
+            newItem.innerHTML = `
+                    <div id="todo-text-${sequence}">${v}</div>
+                    <div>
+                        <!-- .d-flex.gap-2>button.btn.btn-primary*2 -->
+                        <div class="d-flex gap-2">
+                            <button id="done-btn-${sequence}" class="btn btn-outline-info btn-sm">
+                                <i class="fa-solid fa-check"></i>
+                            </button>
+                            <button id="remove-btn-${sequence}" class="btn btn-outline-danger btn-sm">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+            `;
+
+            // ul 아래 추가
+            let ul = document.querySelector("#list1");
+            ul.append(newItem);
+
+            // 완료 버튼에 클릭 이벤트 추가 (id: don-btn-${sequence}) 
+            let doneBtn = document.querySelector(`#done-btn-${sequence}`);
+            doneBtn.addEventListener("click", function() {
+                //* 함수는 trigger만 걸고, 완료버튼 눌렀을 때 아래 소스가 실행된다. 
+                // div contents(text)
+                let textDiv = document.querySelector(`#todo-text-${sequence}`);
+                // text-decoration-line-through 클래스 추가 / 삭제
+                textDiv.classList.toggle("text-decoration-line-through");
+                // text-decoration-line-through 클래스가 있으면
+                if (textDiv.classList.contains("text-decoration-line-through")) {
+                    // 버튼 내용을 back 아이콘,
+                    doneBtn.innerHTML = `<i class="fa-solid fa-rotate-left"></i>`;
+                    // 버튼 색 secondary
+                    doneBtn.classList.add("btn-outline-secondary");
+                    doneBtn.classList.remove("btn-outline-info");
+                } else {
+                    // 없으면 check 아이콘
+                    doneBtn.innerHTML = `<i class="fa-solid fa-check"></i>`;
+                    // 버튼 색 info
+                    doneBtn.classList.remove("btn-outline-secondary");
+                    doneBtn.classList.add("btn-outline-info");
+                }
+            });
+
+            // remove-btn-${sequence} 버튼 클릭 이벤트 추가
+            document.querySelector(`#remove-btn-${sequence}`).addEventListener("click", function() {
+                newItem.remove();
+            })
+        });
         
     </script>
   </body>
