@@ -1,6 +1,6 @@
 
-	3) Git 명령어 - 커밋 하나로 합치기(병합)
-	  - `git rebase -i HEAD~{합치려는 커밋개수}`
+	3) Git 명령어 - 커밋 하나로 합치기(병합) -> `squash`
+	  - `git rebase -i {HEAD~합치려는 커밋개수|커밋번호|브랜치명}`
 	  
 ``` //* 커밋 합치기 실습 (rebase)
 (master)
